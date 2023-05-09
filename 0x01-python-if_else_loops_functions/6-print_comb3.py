@@ -6,7 +6,7 @@ for i in range(10):
             continue
 
         print("{}".format(i), end="")
-    
+
         if (i == 8) and (j == 9):
             print("{}".format(j))
         else:
