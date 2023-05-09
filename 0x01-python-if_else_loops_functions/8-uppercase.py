@@ -9,8 +9,6 @@ def uppercase(str):
         None
     """
     for i in str:
-        if ord(i) >= 97 and ord(i) < 123:
-            tmp = 32
-        else:
-            tmp = 0
+        tmp = 32 if ord(i) >= 97 and ord(i) < 123 else 0
         print("{:c}".format(ord(i) - tmp), end="")
+    print("".format())
