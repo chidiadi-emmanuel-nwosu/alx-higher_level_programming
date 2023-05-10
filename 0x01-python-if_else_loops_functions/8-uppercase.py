@@ -12,8 +12,5 @@ def uppercase(str):
     count = 0
     for i in str:
         tmp = 32 if ord(i) >= 97 and ord(i) < 123 else 0
-        if count != s_len - 1:
-            print("{:c}".format(ord(i) - tmp), end="")
-        else:
-            print("{:c}".format(ord(i) - tmp))
-        count += 1
+        print("{:c}".format(ord(i) - tmp), end="")
+    print()
