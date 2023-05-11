@@ -4,24 +4,19 @@ def main():
     from calculator_1 import add, sub, mul, div
 
     if len(sys.argv) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
 
+    valid_op = {"+": add, "-": sub, "*": sub, "/": div}
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     op = sys.argv[2]
 
-    if op == "+":
-        print(f"{a} {op} {b} = {add(a, b)}")
-    elif op == "-":
-        print(f"{a} {op} {b} = {sub(a, b)}")
-    elif op == "*":
-        print(f"{a} {op} {b} = {mul(a, b)}")
-    elif op == "/":
-        print(f"{a} {op} {b} = {div(a, b)}")
-    else:
+    if op not in list(valid_op.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
+
+    print("{} {} {} = {}".format(a, op, b, valid_op[op](a, b)))
 
 
 if __name__ == "__main__":
