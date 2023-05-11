@@ -4,11 +4,12 @@ def main():
 
     from sys import argv
 
-    le = len(argv)
-    print(f"{le - 1} arguments:")
+    _len = len(argv)
+    le = _len - 1
+    print("{} arguments:".format(le, arguments if le != 1 else argument))
 
-    for i in range(1, le):
-        print(f"{i}: {argv[i]}")
+    for i in range(1, _len):
+        print("{}: {}".format(i, argv[i]))
 
 
 if __name__ == "__main__":
