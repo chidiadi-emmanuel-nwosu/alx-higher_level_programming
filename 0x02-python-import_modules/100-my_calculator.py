@@ -11,18 +11,17 @@ def main():
     b = int(sys.argv[3])
     op = sys.argv[2]
 
-    match op:
-        case "+":
-            print(f"{a} {op} {b} = {add(a, b)}")
-        case "-":
-            print(f"{a} {op} {b} = {sub(a, b)}")
-        case "*":
-            print(f"{a} {op} {b} = {mul(a, b)}")
-        case "/":
-            print(f"{a} {op} {b} = {div(a, b)}")
-        case _:
-            print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
+    if op == "+":
+        print(f"{a} {op} {b} = {add(a, b)}")
+    elif op == "-":
+        print(f"{a} {op} {b} = {sub(a, b)}")
+    elif op == "*":
+        print(f"{a} {op} {b} = {mul(a, b)}")
+    elif op == "/":
+        print(f"{a} {op} {b} = {div(a, b)}")
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
