@@ -6,7 +6,7 @@ def main():
 
     _len = len(argv)
     le = _len - 1
-    print("{} arguments:".format(le, arguments if le != 1 else argument))
+    print("{} {}:".format(le, arguments if le != 1 else argument))
 
     for i in range(1, _len):
         print("{}: {}".format(i, argv[i]))
