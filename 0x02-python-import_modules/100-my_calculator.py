@@ -7,7 +7,7 @@ def main():
         print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
 
-    valid_op = {"+": add, "-": sub, "*": sub, "/": div}
+    valid_op = {"+": add, "-": sub, "*": mul, "/": div}
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     op = sys.argv[2]
