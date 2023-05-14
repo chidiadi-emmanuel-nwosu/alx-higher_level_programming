@@ -11,8 +11,11 @@ def max_integer(my_list=[]):
         my_list: list input
 
     Returns:
-        the max value in my_list
+        the max value in my_list or None if list is empty
     """
+    if len(my_list) == 0:
+        return None
+
     _max = 0
     for i in my_list:
         if i > _max:
