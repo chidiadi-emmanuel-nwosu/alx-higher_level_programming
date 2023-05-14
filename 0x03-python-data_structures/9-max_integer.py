@@ -13,7 +13,7 @@ def max_integer(my_list=[]):
     Returns:
         the max value in my_list or None if list is empty
     """
-    if len(my_list) == 0:
+    if not my_list:
         return None
 
     _max = 0
