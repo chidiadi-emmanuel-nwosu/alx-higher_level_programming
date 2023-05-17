@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 def best_score(a_dictionary):
     if not len(a_dictionary.values()):
         return None
