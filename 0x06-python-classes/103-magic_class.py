@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+# File: 103-magic_class.py
+# Author: Chidiadi E. Nwosu
+
+"""Defines MagicClass that reproduces a code from a Python bytecode"""
+
+
 import math
-"""defines a magic class"""
 
 
 class MagicClass:
+    """Creates a circle """
+
     def __init__(self, radius):
         """initializes a circle
 
