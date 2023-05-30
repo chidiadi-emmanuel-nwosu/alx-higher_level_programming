@@ -11,7 +11,7 @@ import math
 class MagicClass:
     """Creates a circle """
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """initializes a circle
 
         Args:
