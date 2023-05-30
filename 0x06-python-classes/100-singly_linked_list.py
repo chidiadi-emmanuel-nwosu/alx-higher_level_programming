@@ -90,14 +90,11 @@ class SinglyLinkedList:
     def __str__(self):
         """returns the string representation of the linked list"""
 
-        if self.__head is None:
-            return "\n"
-
-        linked_list = ""
+        linked_list = []
         tmp = self.__head
 
         while tmp is not None:
-            linked_list += str(tmp.data) + "\n"
+            linked_list.append(str(tmp.data))
             tmp = tmp.next_node
 
-        return linked_list
+        return "\n".join(linked_list)
