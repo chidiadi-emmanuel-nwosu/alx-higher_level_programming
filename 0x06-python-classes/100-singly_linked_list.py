@@ -91,7 +91,7 @@ class SinglyLinkedList:
         """returns the string representation of the linked list"""
 
         if self.__head is None:
-            return ""
+            return "\n"
 
         linked_list = ""
         tmp = self.__head
