@@ -87,7 +87,7 @@ class Square:
         square = []
 
         if a == 0:
-            square.append("\n")
+            square.append("")
         else:
             for i in range(c):
                 square.append("")
