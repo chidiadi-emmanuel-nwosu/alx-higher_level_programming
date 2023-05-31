@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# File: 2-square.py
+# File: 5-square.py
 # Author: Chidiadi E. Nwosu
 
 """Define a square class"""
