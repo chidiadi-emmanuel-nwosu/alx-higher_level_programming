@@ -1,0 +1,57 @@
+The ``4-print_square`` module
+=================================
+
+Using ``print_square``
+--------------------------
+
+First import ``text_indentation`` from ``5-text_indentation``:
+    >>> print_square = __import__('4-print_square').print_square
+   
+Check for wrong inputs
+
+    >>> print_square(1.2)
+    Traceback (most recent call last):
+	    ...
+    TypeError: size must be an integer
+
+    >>> print_square(-1.2)
+    Traceback (most recent call last):
+	    ...
+    TypeError: size must be an integer
+
+    >>> print_square('10')
+    Traceback (most recent call last):
+	    ...
+    TypeError: size must be an integer
+
+    >>> print_square(-1)
+    Traceback (most recent call last):
+	    ...
+    ValueError: size must be >= 0
+
+
+Check for correct inputs
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(0)
+    <BLANKLINE>
+
+    >>> print_square(1)
+    #
