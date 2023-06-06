@@ -13,7 +13,7 @@ class LockedClass:
            instance attribute is called first_name
         """
 
-        if name == "first_name":
+        if name == "first_name" and isinstance(value, str):
             super().__setattr__(name, value)
         else:
             raise AttributeError(
