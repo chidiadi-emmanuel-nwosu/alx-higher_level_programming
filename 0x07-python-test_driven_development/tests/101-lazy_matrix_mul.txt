@@ -63,6 +63,16 @@ Testing for wrong inputs
 	    ...
     ValueError: shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
 
+    >>> lazy_matrix_mul()
+    Traceback (most recent call last):
+	    ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+    >>> lazy_matrix_mul([[1, 2, 3]])
+    Traceback (most recent call last):
+	    ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
 
 Check for correct inputs
 
