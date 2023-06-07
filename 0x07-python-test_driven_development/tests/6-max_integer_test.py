@@ -13,6 +13,8 @@ class TestMaxInteger(unittest.TestCase):
         """Test the function for correct list inputs"""
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
+        self.assertEqual(max_integer([4, 3, 1, 2]), 4)
+        self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer([-10, -8, 0]), 0)
 
     def test_empty(self):
