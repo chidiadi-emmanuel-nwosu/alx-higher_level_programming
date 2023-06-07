@@ -13,8 +13,9 @@ First import ``matrix_divided`` from ``2-matrix_divided`` module:
 
     >>> _matrix = [[1, '2', 3], [4, 5, 6]]
 
+    >>> __matrix = [[1, 2], [3, 4, 5]]
 
-Check for correct inputs
+Check for incorrect inputs
 
     >>> matrix_divided('matrix', 3)
     Traceback (most recent call last):
@@ -25,6 +26,11 @@ Check for correct inputs
     Traceback (most recent call last):
 	    ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(__matrix, 3)
+    Traceback (most recent call last):
+	    ...
+    TypeError: Each row of the matrix must have the same size
 
     >>> matrix_divided(matrix, '3')
     Traceback (most recent call last):
@@ -41,3 +47,6 @@ Check for correct inputs
 
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
