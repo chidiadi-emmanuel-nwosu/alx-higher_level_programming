@@ -7,17 +7,23 @@ def matrix_divided(matrix, div):
     """divides all elements of a matrix
     """
     if not isinstance(matrix, list):
-        raise TypeError('matrix must be a matrix \
-                (list of lists) of integers/floats')
+        raise TypeError(
+            'matrix must be a matrix (list of lists) '
+            'of integers/floats'
+        )
 
     for row in matrix:
         if not isinstance(row, list):
-            raise TypeError('matrix must be a matrix \
-                    (list of lists) of integers/floats')
+            raise TypeError(
+                'matrix must be a matrix (list of lists) '
+                'of integers/floats'
+            )
         for elements in row:
             if not isinstance(elements, (int, float)):
-                raise TypeError('matrix must be a matrix \
-                        (list of lists) of integers/floats')
+                raise TypeError(
+                    'matrix must be a matrix (list of lists) '
+                    'of integers/floats'
+                )
 
     first_row_len = len(matrix[0])
     for row in matrix:
