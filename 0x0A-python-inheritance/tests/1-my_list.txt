@@ -65,7 +65,7 @@ Inserting values:
     >>> my_list.append()
     Traceback (most recent call last):
 	    ...
-    TypeError: list.append() takes exactly one argument (0 given)
+    TypeError: append() takes exactly one argument (0 given)
 
 
 
@@ -73,11 +73,11 @@ Inserting values:
     >>> my_list.append(1, 2)
     Traceback (most recent call last):
 	    ...
-    TypeError: list.append() takes exactly one argument (2 given)
+    TypeError: append() takes exactly one argument (2 given)
 
 
 
     >>> my_list = MyList(1, 2)
     Traceback (most recent call last):
 	    ...
-    TypeError: list expected at most 1 argument, got 2
+    TypeError: list() takes at most 1 argument (2 given)
