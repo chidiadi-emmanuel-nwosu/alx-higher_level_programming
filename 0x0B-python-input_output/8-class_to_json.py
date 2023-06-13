@@ -8,4 +8,4 @@ def class_to_json(obj):
        data structure (list, dictionary, string, integer
        and boolean) for JSON serialization of an object
     """
-    return my_obj.__dict__
+    return obj.__dict__
