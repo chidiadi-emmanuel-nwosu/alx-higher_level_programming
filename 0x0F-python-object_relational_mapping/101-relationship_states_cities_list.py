@@ -17,8 +17,6 @@ if __name__ == "__main__":
 
     for i in session.query(State).order_by(State.id).all():
         print(f"{i.id}: {i.name}")
-        for city in i.cities:
+        cities = sorted(i.cities, key=lambda x: x.id)
+        for city in cities:
             print(f'\t{city.id}: {city.name}')
-
-    for i in session.query(City).order_by(City.id).all():
-        print(f"{i.state.name}")
