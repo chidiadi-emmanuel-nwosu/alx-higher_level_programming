@@ -20,7 +20,7 @@ def main():
         c = mysql.cursor()
         c.execute(
                 "SELECT * FROM states \
-                WHERE name = '{}' \
+                WHERE name = '{}' COLLATE utf8mb4_bin \
                 ORDER BY id".format(argv[4])
                 )
 

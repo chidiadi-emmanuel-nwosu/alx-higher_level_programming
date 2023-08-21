@@ -18,7 +18,9 @@ def main():
                 db=argv[3]
                 )
         c = mysql.cursor()
-        c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+        c.execute(
+                "SELECT * FROM states WHERE name LIKE 'N%' \
+                        COLLATE utf8mb4_bin ORDER BY id")
 
         for state in c.fetchall():
             print(state)
