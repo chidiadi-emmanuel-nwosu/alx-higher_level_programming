@@ -17,13 +17,13 @@ def find_peak(list_of_integers):
         return max(list_of_integers)
 
     # get the mid point of the list
-    mid = int(length / 2)
+    mid = length // 2
 
     # set the peak value to the integer at the midpoint
     peak = list_of_integers[mid]
 
     # check if the peak value satisfies the conditions
-    if peak > list_of_integers[mid + 1] and peak > list_of_integers[mid + 1]:
+    if peak > list_of_integers[mid + 1] and peak > list_of_integers[mid - 1]:
         return peak
 
     # recursively check half of the list if the initial
