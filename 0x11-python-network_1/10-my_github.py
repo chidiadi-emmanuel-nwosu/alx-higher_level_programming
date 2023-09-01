@@ -6,9 +6,10 @@ import requests
 import sys
 
 
-user = sys.argv[1]
-token = sys.argv[2]
-url = 'https://api.github.com/user'
+if __name__ == "__main__":
+    user = sys.argv[1]
+    token = sys.argv[2]
+    url = 'https://api.github.com/user'
 
-response = requests.get(url, auth=requests.auth.HTTPBasicAuth(user, token))
-print(response.json()['id'])
+    response = requests.get(url, auth=requests.auth.HTTPBasicAuth(user, token))
+    print(response.json()['id'])
