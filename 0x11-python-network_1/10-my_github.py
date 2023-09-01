@@ -8,16 +8,7 @@ import sys
 
 user = sys.argv[1]
 token = sys.argv[2]
-url = f'https://api.github.com/users/{user}'
-param = {'Authorization': f'token {token}'}
+url = 'https://api.github.com/user'
 
-response = requests.get(url, auth=param)
-try:
-    data = response.json()
-except Exception as e:
-    print("Not a valid JSON")
-
-if data:
-    print(data)
-else:
-    print("No result")
+response = requests.get(url, auth=requests.auth.HTTPBasicAuth(user, token))
+print(response.json()['id'])
