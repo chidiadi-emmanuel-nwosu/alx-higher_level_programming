@@ -8,18 +8,16 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    try:
-        param = {'q': sys.argv[1]}
-    except Exception:
-        param = {'q': ""}
+    letter = "" if sys.argv == 1 else sys.argv[1]
+    param = {'q': letter}
 
     response = requests.post(url, param)
     try:
         data = response.json()
-    except Exception as e:
-        print("Not a valid JSON")
+        if data:
+            print(f"[{data['id']}] {data['name']}")
+        else:
+            print("No result")
 
-    if data:
-        print(f"[{data['id']}] {data['name']}")
-    else:
-        print("No result")
+    except Exception:
+        print("Not a valid JSON")
