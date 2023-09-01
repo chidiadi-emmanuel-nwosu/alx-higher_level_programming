@@ -8,12 +8,13 @@ import urllib.parse
 import sys
 
 
-url = sys.argv[1]
-email = sys.argv[2]
-param = {'email': email}
-data = urllib.parse.urlencode(param).encode('utf-8')
-request = urllib.request.Request(url, data)
+if __name__ == "__main__":
+    url = sys.argv[1]
+    email = sys.argv[2]
+    param = {'email': email}
+    data = urllib.parse.urlencode(param).encode('utf-8')
+    request = urllib.request.Request(url, data)
 
-with urllib.request.urlopen(request) as response:
-    res = response.read()
-    print(res)
+    with urllib.request.urlopen(request) as response:
+        res = response.read()
+        print(res)

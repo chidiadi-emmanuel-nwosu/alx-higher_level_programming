@@ -6,19 +6,20 @@ import requests
 import sys
 
 
-url = "http://0.0.0.0:5000/search_user"
-try:
-    param = {'q': sys.argv[1]}
-except Exception:
-    param = {'q': ""}
+if __name__ == "__main__":
+    url = "http://0.0.0.0:5000/search_user"
+    try:
+        param = {'q': sys.argv[1]}
+    except Exception:
+        param = {'q': ""}
 
-response = requests.post(url, param)
-try:
-    data = response.json()
-except Exception as e:
-    print("Not a valid JSON")
+    response = requests.post(url, param)
+    try:
+        data = response.json()
+    except Exception as e:
+        print("Not a valid JSON")
 
-if data:
-    print(f"[{data['id']}] {data['name']}")
-else:
-    print("No result")
+    if data:
+        print(f"[{data['id']}] {data['name']}")
+    else:
+        print("No result")
