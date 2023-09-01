@@ -15,4 +15,4 @@ if __name__ == "__main__":
     response = requests.get(url, params=param).json()
 
     for res in response:
-        print(f"{res.get('sha')}: {res.get('commit').get('author').get('name')}")
+        print(f"{res['sha']}: {res['commit']['author']['name']}")
