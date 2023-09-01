@@ -8,7 +8,7 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    letter = "" if sys.argv == 1 else sys.argv[1]
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
     param = {'q': letter}
 
     response = requests.post(url, param)
