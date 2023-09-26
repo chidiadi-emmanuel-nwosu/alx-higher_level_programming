@@ -16,7 +16,7 @@ request.get(args[0], (err, response, body) => {
         users[element.userId] = count.length;
       });
 
-      if (Object.keys(users).length) { console.log(users); }
+      console.log(users);
     }
   }
 });
