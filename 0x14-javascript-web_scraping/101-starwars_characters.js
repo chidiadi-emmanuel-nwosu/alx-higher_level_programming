@@ -7,19 +7,19 @@ let characters = [];
 
 request(url, (err, response, body) => {
   if (!err) {
-      const data = JSON.parse(body)
-      characters = data.characters;
-      printCharacters(characters, 0);
+    const data = JSON.parse(body);
+    characters = data.characters;
+    printCharacters(0);
   }
 });
 
-function printCharacters (data, index) {
-  request(data[index], (err, response, body) => {
+function printCharacters (index) {
+  if (index === characters.length) { return; }
+  request(characters[index], (err, response, body) => {
     if (!err) {
-        const name = JSON.parse(body).name;
-        console.log(name);
+      const name = JSON.parse(body).name;
+      console.log(name);
     }
   });
-
-  if (index < data.length - 1) { printCharacters(data, index + 1); }
+  printCharacters(index + 1);
 }
